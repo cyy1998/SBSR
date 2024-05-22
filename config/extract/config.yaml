@@ -1,0 +1,21 @@
+dataset:
+  sketch_datadir: './data/SHREC13_ZS2/13_sketch_test_picture'
+  view_datadir: './data/SHREC13_ZS2/13_view_render_test_img'
+  batch_size: 32
+  workers: 5
+train:
+  num_classes: 133
+  gpu: '0'
+  seed: 1
+  use_cpu: true
+  uncer: false
+model:
+  pretrain: true
+  model: './hf_model/models--openai--clip-vit-base-patch32'
+  ckpt_dir: './ckpt/Epoch20'
+features:
+  cnn_feat_dim: 512
+  feat_dim: 256
+  test_feat_dir: './output/feature.mat'
+  # train_feat_dir: './output/train/'
+  # pattern: false
